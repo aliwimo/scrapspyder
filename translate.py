@@ -1,13 +1,14 @@
 import requests
 
+def translate(text):
+    target_lang = 'hi'
+    # Use the MyMemory API to translate the text
+    url = f"https://api.mymemory.translated.net/get?q={text}&langpair=en|{target_lang}"
+    response = requests.get(url).json()
+    return response['responseData']['translatedText']
+
+
 # Set the text and the target language
 text = 'Hello, world!'
-target_lang = 'hi'
-
-# Use the MyMemory API to translate the text
-url = f"https://api.mymemory.translated.net/get?q={text}&langpair=en|{target_lang}"
-response = requests.get(url).json()
-translation = response['responseData']['translatedText']
-
 # Print the translation
-print(translation)
+print(translate(text))
