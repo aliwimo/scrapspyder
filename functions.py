@@ -31,6 +31,8 @@ def trim_domain(link, domain):
     same_domain = True
     parsed_link = urlparse(link)
     parsed_domain = urlparse(domain)
-    if parsed_link.scheme != parsed_domain.scheme or parsed_link.netloc != parsed_domain.netloc:
+    if not parsed_link.netloc:
+        return link, same_domain
+    elif parsed_link.scheme != parsed_domain.scheme or parsed_link.netloc != parsed_domain.netloc:
         return link, not same_domain
     return parsed_link.path.lstrip('/'), same_domain
