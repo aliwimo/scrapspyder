@@ -1,14 +1,14 @@
 import requests
 
-def translate(text):
-    target_lang = 'hi'
-    # Use the MyMemory API to translate the text
-    url = f"https://api.mymemory.translated.net/get?q={text}&langpair=en|{target_lang}"
-    response = requests.get(url).json()
-    return response['responseData']['translatedText']
+url = "https://nlp-translation.p.rapidapi.com/v1/translate"
 
+querystring = {"text":"Hello, world!!","to":"es","from":"en"}
 
-# Set the text and the target language
-text = 'Hello, world!'
-# Print the translation
-print(translate(text))
+headers = {
+	"X-RapidAPI-Key": "74328c4219mshf8d62d7be11c012p1e0250jsnf9ad32fb0a56",
+	"X-RapidAPI-Host": "nlp-translation.p.rapidapi.com"
+}
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
