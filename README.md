@@ -8,9 +8,9 @@ pip install scrapspyder
 ``` -->
 
 ## Usage
-To use Scraper, create an instance of the Scraper class and pass in the URL of the website you want to scrape. You can also specify the destination folder where the downloaded files will be saved, the depth of the crawl, whether to perform a deep scan for assets, and more. Here's an example:
+To use `ScrapSpyder`, create an instance of the `Scraper` class and pass in the URL of the website you want to scrape. You can also specify the destination folder where the downloaded files will be saved, the depth of the crawl, whether to perform a deep scan for assets, and more. Here's an example:
 
-```
+```python
 from scraper import Scraper
 
 sc = Scraper(source="https://www.example.com/",
@@ -27,7 +27,7 @@ This will crawl the website and download all the files to a folder called exampl
 
 To translate html pages to other languages; the following examples translates the downloaded html files from English `en` to Hindi `hi`:
 
-```
+```python
 from scraper import Translator
 
 tr = Translator(source="example", 
@@ -39,14 +39,13 @@ tr.start()
 
 ```
 
-
 ## Requirements
 This package requires the following Python libraries:
 - requests
 - beautifulsoup4
 
 ## Contributing
-If you find a bug or would like to contribute to the development of Scraper, please open an issue or pull request on GitHub.
+If you find a bug or would like to contribute to the development of `ScrapSpyder`, please open an issue or pull request on GitHub.
 
 ## License
 `ScrapSpyder` is licensed under the MIT License. See `LICENSE` for more information.
