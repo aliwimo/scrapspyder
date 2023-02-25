@@ -1,2 +1,2 @@
-# web-scraping
-Websites scraping using Python
+# ScrapSpyder
+Simple websites scraping package using Python
