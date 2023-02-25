@@ -1,11 +1,11 @@
 # ScrapSpyder
 `ScrapSpyder` is a Python package that allows you to scrape and download files from a website. It uses the `requests` and `BeautifulSoup` libraries to crawl a website and download all the files (html, css, js, images, etc.) present on it.
 
-## Installation
+<!-- ## Installation
 To install Scraper, simply run:
 ```
 pip install scrapspyder
-```
+``` -->
 
 ## Usage
 To use Scraper, create an instance of the Scraper class and pass in the URL of the website you want to scrape. You can also specify the destination folder where the downloaded files will be saved, the depth of the crawl, whether to perform a deep scan for assets, and more. Here's an example:
