@@ -25,6 +25,21 @@ sc.download()
 
 This will crawl the website and download all the files to a folder called example.
 
+To translate html pages to other languages; the following examples translates the downloaded html files from English `en` to Hindi `hi`:
+
+```
+from scraper import Translator
+
+tr = Translator(source="example", 
+                source_lang="en", 
+                target_lang="hi", 
+                verbose=True
+                )
+tr.start()
+
+```
+
+
 ## Requirements
 This package requires the following Python libraries:
 - requests
