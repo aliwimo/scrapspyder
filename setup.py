@@ -15,6 +15,7 @@ setup(
     version=VERSION,
     description=DESCRIPTION,
     long_description=long_description,
+    long_description_content_type='text/markdown',
     author="Mohamed Aliwi",
     author_email="aliwimo@gmail.com",
     license="MIT License",
